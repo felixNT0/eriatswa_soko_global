@@ -28,23 +28,32 @@ const features = [
 
 export const Features = () => {
   return (
-    <section className="py-20 bg-background relative border-t border-border/10">
-        <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-[0.03]" />
+    <section className="py-20 bg-background relative overflow-hidden border-t border-border/10">
+        {/* Modern Grid Overlay */}
+        <div className="absolute inset-0 opacity-[0.03] bg-[url('https://www.transparenttextures.com/patterns/grid-me.png')] pointer-events-none" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(197,160,40,0.05),transparent_70%)]" />
+        
         <div className="container mx-auto px-6 md:px-12 relative z-10">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-px bg-border/10 border border-border/10 overflow-hidden shadow-2xl">
                 {features.map((f, i) => (
                     <motion.div 
                         key={i}
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        transition={{ delay: i * 0.1 }}
-                        className="bg-secondary/20 p-8 border border-border/10 hover:border-primary/30 transition-colors group"
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: i * 0.1, duration: 0.8 }}
+                        className="bg-background p-10 md:p-12 hover:bg-secondary/30 transition-all duration-500 group relative"
                     >
-                        <div className="w-14 h-14 bg-primary/10 text-primary flex items-center justify-center mb-6 rounded-full group-hover:scale-110 transition-transform">
-                            {f.icon}
+                        <div className="relative z-10">
+                            <div className="w-12 h-12 text-primary flex items-start justify-start mb-10 group-hover:scale-110 group-hover:rotate-6 transition-transform duration-500">
+                                {f.icon}
+                            </div>
+                            <h3 className="text-sm font-bold uppercase tracking-[0.2em] mb-4 text-foreground group-hover:text-primary transition-colors">{f.title}</h3>
+                            <p className="text-muted-foreground text-xs leading-relaxed font-light">{f.desc}</p>
                         </div>
-                        <h3 className="text-xl font-display font-bold uppercase mb-3 text-foreground">{f.title}</h3>
-                        <p className="text-muted-foreground text-sm leading-relaxed">{f.desc}</p>
+                        
+                        {/* Interactive Border Accent */}
+                        <div className="absolute bottom-0 left-0 w-0 h-1 bg-primary group-hover:w-full transition-all duration-700 ease-in-out" />
                     </motion.div>
                 ))}
             </div>

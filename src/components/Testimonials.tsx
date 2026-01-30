@@ -48,14 +48,18 @@ export const Testimonials = () => {
   }, []);
 
   return (
-    <section className="py-32 bg-background border-t border-border/10 overflow-hidden">
-      <div className="container mx-auto px-6 md:px-12">
-        <div className="text-center max-w-3xl mx-auto mb-16">
-             <div className="inline-block px-4 py-1.5 rounded-full border border-primary/20 bg-primary/5 backdrop-blur-sm mb-6">
-                <p className="text-primary font-bold tracking-widest uppercase text-[10px]">Voices</p>
+    <section className="py-24 bg-stone-50 dark:bg-stone-950 relative overflow-hidden">
+        {/* Luxury Paper Texture */}
+        <div className="absolute inset-0 opacity-[0.03] bg-[url('https://www.transparenttextures.com/patterns/natural-paper.png')] pointer-events-none" />
+        <div className="absolute top-0 right-0 w-1/3 h-full bg-primary/5 -skew-x-12 translate-x-1/2 pointer-events-none" />
+
+      <div className="container mx-auto px-6 md:px-12 relative z-10">
+        <div className="text-center max-w-3xl mx-auto mb-20">
+             <div className="inline-block px-4 py-1.5 rounded-full border border-primary/20 bg-primary/5 backdrop-blur-sm mb-8">
+                <p className="text-primary font-bold tracking-[0.4em] uppercase text-[10px]">The Collective Voice</p>
              </div>
-             <h2 className="text-5xl md:text-7xl font-display font-black uppercase mb-6 text-foreground tracking-tight">
-                Client <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-yellow-600">Stories.</span>
+             <h2 className="text-5xl md:text-7xl font-display font-black uppercase mb-6 text-foreground tracking-tighter leading-none">
+                Mastery <span className="text-outlined">Recognized.</span>
              </h2>
         </div>
 

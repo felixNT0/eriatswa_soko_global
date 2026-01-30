@@ -21,7 +21,7 @@ export const Hero = () => {
   }, []);
 
   return (
-    <section className="relative min-h-[90vh] flex flex-col justify-center px-6 md:px-12 pt-20 overflow-hidden bg-background">
+    <section className="relative min-h-dvh flex flex-col justify-center px-6 md:px-12 pt-20 overflow-hidden bg-background">
       {/* Background Slider */}
       <div className="absolute inset-0 z-0">
          <AnimatePresence mode="wait">
@@ -41,27 +41,26 @@ export const Hero = () => {
 
       <div className="container mx-auto relative z-10">
         <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="flex md:mt-10 flex-col md:flex-row max-md:items-end md:items-center gap-6 mb-8"
+            initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }}
+            className="flex md:mt-10 flex-col md:flex-row items-center max-md:justify-center gap-6 mb-8"
         >
              <div className="h-px w-12 bg-primary hidden md:block" />
-             <p className="text-sm font-bold uppercase tracking-[0.2em] text-primary">
+             <p className="text-sm font-bold uppercase text-center md:text-left tracking-[0.2em] text-primary">
               Handcrafted With Excellence
             </p>
+            <div className="h-px w-8 bg-primary/30 md:hidden" />
         </motion.div>
         
-        <h1 className="font-display font-black text-6xl md:text-8xl lg:text-9xl leading-[0.9] tracking-tighter uppercase text-foreground mb-8 text-balance">
+        <h1 className="font-display font-black text-center md:text-left text-6xl md:text-8xl lg:text-9xl leading-[0.9] tracking-tighter uppercase text-foreground mb-8 text-balance">
             Crafted <br/>
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-yellow-600">To Stand Out.</span>
         </h1>
 
         <motion.div 
             initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.5, duration: 1 }}
-            className="flex flex-col md:flex-row gap-8 mt-12 md:items-center justify-between border-t border-border/20 pt-8"
+            className="flex flex-col md:flex-row gap-8 mt-12 items-center justify-between border-t border-border/20 pt-8"
         >
-            <p className="max-w-md text-lg text-muted-foreground leading-relaxed">
+            <p className="max-w-md text-center md:text-left text-lg text-muted-foreground leading-relaxed font-light">
                 Welcome to the new standard of African luxury. Bespoke handcrafted bags, premium footwear, and the academy building the future of craftsmanship.
             </p>
             

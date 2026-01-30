@@ -20,74 +20,84 @@ const TikTokIcon = ({ size = 18, className = "" }) => (
 
 export const Footer = () => {
     return (
-        <footer id="contact" className="bg-secondary pt-32 pb-10 border-t border-white/10 relative overflow-hidden">
-            {/* Giant Text Background */}
-            <div className="absolute top-0 left-0 w-full overflow-hidden opacity-[0.03] pointer-events-none select-none">
-                <span className="text-[20vw] font-display font-black uppercase whitespace-nowrap leading-none text-white">
+        <footer id="contact" className="bg-[#0C0A09] pt-40 pb-12 border-t border-white/5 relative overflow-hidden">
+            {/* Artistic Branding Overlay */}
+            <div className="absolute bottom-0 left-0 w-full overflow-hidden opacity-[0.05] pointer-events-none select-none translate-y-1/2">
+                <span className="text-[25vw] font-display font-black uppercase whitespace-nowrap leading-none text-white tracking-tighter">
                     Eriatswa Soko
                 </span>
             </div>
 
             <div className="container mx-auto px-6 md:px-12 relative z-10">
-                <div className="flex flex-col md:flex-row justify-between items-start mb-24 gap-12">
-                    <div className="max-w-xl">
-                        <h2 className="text-6xl md:text-8xl font-display font-black uppercase text-white mb-8 leading-[0.8]">
-                            Let's <br/> Create.
+                <div className="grid lg:grid-cols-12 gap-20 mb-32">
+                    <div className="lg:col-span-5">
+                        <div className="inline-block px-4 py-1.5 rounded-full border border-primary/30 bg-primary/5 mb-10">
+                            <p className="text-primary font-bold tracking-[0.4em] uppercase text-[10px]">Atelier Inquiries</p>
+                        </div>
+                        <h2 className="text-6xl md:text-8xl font-display font-black uppercase text-white mb-12 leading-[0.8] tracking-tighter">
+                            A Legacy <br/> In Every <br/> <span className="text-outlined">Stitch.</span>
                         </h2>
-                        <a href="mailto:lucytsowa3@gmail.com" className="text-xl md:text-3xl font-sans font-light border-b border-gold pb-2 inline-block hover:text-primary transition-colors">
-                            lucytsowa3@gmail.com
-                        </a>
+                        <div className="space-y-4">
+                            <p className="text-stone-500 font-bold uppercase tracking-[0.3em] text-[10px]">Direct Correspondence</p>
+                            <a href="mailto:lucytsowa3@gmail.com" className="text-2xl md:text-4xl font-light text-white hover:text-primary transition-colors duration-500 border-b border-primary/20 pb-2 inline-block">
+                                lucytsowa3@gmail.com
+                            </a>
+                        </div>
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-24">
-                        <div className="space-y-6">
-                            <h4 className="text-xs font-bold uppercase tracking-[0.2em] text-muted-foreground">Offices</h4>
-                            <div>
-                                <h5 className="text-white text-lg font-bold">Lagos & Ilorin</h5>
-                                <p className="text-muted-foreground">Delivery All Over Nigeria & Worldwide.</p>
-                            </div>
-                            
-                            <div className="flex flex-col gap-2 mt-4">
-                                                                
-              <a
-                                    href="tel:+2347035467338" 
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-primary uppercase tracking-widest text-sm font-bold  hover:underline"
-              >
-                <Phone size={16} /> +234 703 546 7338
-              </a>
-
-              <a
-                href="https://wa.me/2347035467338"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-primary uppercase tracking-widest text-sm font-bold hover:underline"
-              >
-                <MessageCircle size={16} /> WhatsApp
-              </a>
-       </div>
+                    <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-16">
+                        <div className="space-y-10">
+                            <h4 className="text-[10px] font-bold uppercase tracking-[0.4em] text-primary">Navigation</h4>
+                            <ul className="space-y-6">
+                                {["Home", "Collection", "Academy", "About", "Journal"].map(item => (
+                                    <li key={item}>
+                                        <a href="#" className="text-stone-400 hover:text-white text-xs font-bold uppercase tracking-widest transition-colors">{item}</a>
+                                    </li>
+                                ))}
+                            </ul>
                         </div>
-                        
-                        <div className="space-y-6">
-                             <h4 className="text-xs font-bold uppercase tracking-[0.2em] text-muted-foreground">Follow Us</h4>
-                             <div className="flex gap-4">
-                                <a href="https://web.facebook.com/paul.lucia.336" className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center hover:bg-facebook hover:border-facebook hover:bg-blue-600 transition-all text-white">
-                                    <Facebook size={20} />
+
+                         <div className="space-y-10">
+                            <h4 className="text-[10px] font-bold uppercase tracking-[0.4em] text-primary">Contact</h4>
+                            <ul className="space-y-8">
+                                <li className="space-y-2">
+                                    <span className="text-stone-600 text-[10px] uppercase font-bold tracking-widest">Global Atelier</span>
+                                    <p className="text-white text-xs font-bold leading-relaxed uppercase tracking-widest">Lagos & Ilorin, Nigeria</p>
+                                </li>
+                                <li className="space-y-4">
+                                     <a href="tel:+2347035467338" className="flex items-center gap-3 text-white hover:text-primary transition-colors text-xs font-bold uppercase tracking-widest">
+                                        <div className="w-8 h-8 rounded-full border border-white/10 flex items-center justify-center"><Phone size={14} /></div>
+                                        +234 703 546 7338
+                                    </a>
+                                    <a href="https://wa.me/2347035467338" className="flex items-center gap-3 text-white hover:text-primary transition-colors text-xs font-bold uppercase tracking-widest">
+                                        <div className="w-8 h-8 rounded-full border border-white/10 flex items-center justify-center"><MessageCircle size={14} /></div>
+                                        WhatsApp Concierge
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div className="space-y-10">
+                             <h4 className="text-[10px] font-bold uppercase tracking-[0.4em] text-primary">Socials</h4>
+                             <div className="flex flex-col gap-6">
+                                <a href="https://web.facebook.com/paul.lucia.336" className="flex items-center gap-4 group">
+                                    <div className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center group-hover:bg-white group-hover:text-black transition-all"><Facebook size={18} /></div>
+                                    <span className="text-stone-400 group-hover:text-white text-[10px] font-bold uppercase tracking-widest transition-colors">Facebook</span>
                                 </a>
-                                <a href="https://www.tiktok.com/@nnawonchiko" className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center hover:bg-black hover:border-white transition-all text-white">
-                                    <TikTokIcon size={20} />
+                                <a href="https://www.tiktok.com/@nnawonchiko" className="flex items-center gap-4 group">
+                                    <div className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center group-hover:bg-white group-hover:text-black transition-all"><TikTokIcon size={18} /></div>
+                                    <span className="text-stone-400 group-hover:text-white text-[10px] font-bold uppercase tracking-widest transition-colors">TikTok</span>
                                 </a>
                              </div>
                         </div>
                     </div>
                 </div>
 
-                <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between text-xs text-muted-foreground uppercase tracking-widest">
-                    <p>© {new Date().getFullYear()} Eriatswa Soko Global.</p>
-                    <div className="flex gap-8 mt-4 md:mt-0">
-                        <a href="/privacy" className="hover:text-white transition-colors">Privacy</a>
-                        <a href="/terms" className="hover:text-white transition-colors">Terms</a>
+                <div className="border-t border-white/5 pt-12 flex flex-col md:flex-row justify-between items-center gap-8 text-[10px] font-bold text-stone-600 uppercase tracking-[0.3em]">
+                    <p>© {new Date().getFullYear()} Eriatswa Soko Global. Excellence By Design.</p>
+                    <div className="flex gap-12">
+                        <a href="/privacy" className="hover:text-white transition-colors">Privacy Policy</a>
+                        <a href="/terms" className="hover:text-white transition-colors">Terms of Service</a>
                     </div>
                 </div>
             </div>

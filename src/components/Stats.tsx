@@ -6,16 +6,20 @@ import React, { useEffect } from "react";
 
 
 export const Stats = () => {
-    return (
+  return (
       <section className="py-20 border-y border-border/10 bg-background overflow-hidden">
-        <div className="container mx-auto px-6 md:px-12">
+      <div className="container mx-auto px-6 md:px-12">
+           <div className="py-20 relative overflow-hidden bg-background">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_0%_100%,rgba(197,160,40,0.03),transparent_50%)]" />
+        
           <div className="flex flex-col md:flex-row justify-around items-center gap-12">
               <StatItem value={500000} label="Products Delivered" suffix="+" />
               <StatItem value={100} label="Trained & Certified" suffix="+" />
-          </div>
-        </div>
-      </section>
-    );
+            </div>
+      </div>
+      </div>
+    </section>
+  );
 };
 
 const StatItem = ({ value, label, suffix }: { value: number, label: string, suffix: string }) => {

@@ -55,6 +55,26 @@
   --color-ring: var(--ring);
   --font-display: var(--font-syne);
   --font-sans: var(--font-manrope);
+
+  /* Luxury Spacing & Gradients */
+  --letter-spacing-luxury: 0.3em;
+  --letter-spacing-tight: -0.05em;
+}
+
+@layer utilities {
+  .glass {
+    @apply backdrop-blur-xl bg-white/5 border border-white/10 shadow-2xl;
+  }
+  .glass-dark {
+    @apply backdrop-blur-2xl bg-black/40 border border-white/5 shadow-2xl;
+  }
+  .text-luxury {
+    @apply uppercase tracking-[0.3em] font-bold text-[10px];
+  }
+  .text-outlined {
+    -webkit-text-stroke: 1px currentColor;
+    color: transparent;
+  }
 }
 
 body {
@@ -74,6 +94,11 @@ h1, h2, h3, h4, h5, h6 {
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+
+  /* Global Interactive Polish */
+  button, a, [role="button"], input[type="submit"], input[type="button"] {
+    cursor: pointer !important;
   }
 }
 

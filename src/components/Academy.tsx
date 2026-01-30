@@ -5,10 +5,11 @@ import { ArrowRight, Check, Laptop, MapPin } from "lucide-react";
 
 export const Academy = () => {
   return (
-    <section id="academy" className="py-24 relative overflow-hidden bg-[#F5F5F0] dark:bg-background transition-colors duration-500">
-       {/* Background */}
-       <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1605218427368-439492e6205e?q=80&w=2000&auto=format&fit=crop')] bg-cover bg-fixed bg-center opacity-5 dark:opacity-10" />
-       <div className="absolute inset-0 bg-gradient-to-b from-background via-transparent to-background dark:via-background/95 opacity-90" />
+    <section id="academy" className="py-24 relative overflow-hidden bg-[#0a0c10] dark:bg-[#0a0c10] transition-colors duration-500">
+       {/* Deep Cinematic Background */}
+       <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/dark-matter.png')] opacity-30 pointer-events-none" />
+       <div className="absolute top-0 left-0 w-full h-full bg-linear-to-b from-transparent via-primary/5 to-transparent" />
+       <div className="absolute -top-1/4 -right-1/4 w-full h-full bg-primary/10 blur-[180px] rounded-full pointer-events-none" />
 
       <div className="container mx-auto px-6 md:px-12 relative z-10">
         <div className="text-center max-w-3xl mx-auto mb-20">

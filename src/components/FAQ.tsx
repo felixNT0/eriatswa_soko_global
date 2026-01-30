@@ -35,48 +35,48 @@ export const FAQ = () => {
   const [active, setActive] = useState<number | null>(0);
 
   return (
-    <section className="py-24 bg-secondary/5 relative overflow-hidden">
-        <div className="absolute inset-0 opacity-[0.03] bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]" />
+    <section className="py-20 bg-background relative overflow-hidden">
+        {/* Subtle Technical Pattern */}
+        <div className="absolute inset-0 opacity-[0.03] bg-[url('https://www.transparenttextures.com/patterns/asfalt-dark.png')] pointer-events-none" />
+        <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-primary/5 blur-[120px] rounded-full pointer-events-none" />
         
         <div className="container mx-auto px-6 md:px-12 relative z-10">
-            <div className="text-center max-w-3xl mx-auto mb-20">
-                <div className="inline-block px-4 py-1.5 rounded-full border border-primary/20 bg-primary/5 backdrop-blur-sm mb-6">
-                    <p className="text-primary font-bold tracking-widest uppercase text-[10px]">Inquiries</p>
+            <div className="mb-20">
+                <div className="inline-block px-4 py-1.5 rounded-full border border-primary/30 bg-primary/5 mb-8">
+                    <p className="text-primary font-bold tracking-[0.4em] uppercase text-[10px]">Private Concierge / FAQ</p>
                 </div>
-                <h2 className="text-5xl md:text-7xl font-display font-black uppercase mb-6 text-foreground tracking-tight">
-                    Common <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-yellow-600">Questions.</span>
+                <h2 className="text-6xl md:text-8xl font-display font-black uppercase mb-10 text-foreground leading-[0.8] tracking-tighter">
+                    Essential <br/> 
+                    <span className="text-outlined">Inquiries.</span>
                 </h2>
-                <p className="text-muted-foreground leading-relaxed text-lg md:text-xl font-light">
-                    Everything you need to know about our products, global shipping, and training academy.
-                </p>
+                <div className="h-px w-32 bg-primary opacity-30" />
             </div>
 
-            <div className="max-w-4xl mx-auto grid gap-4">
+            <div className="max-w-5xl grid gap-6">
                 {faqs.map((item, i) => (
                     <motion.div 
                         key={i}
-                        initial={{ opacity: 0, y: 10 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        transition={{ delay: i * 0.05 }}
-                        className={`group rounded-2xl border transition-all duration-300 ${
-                            active === i 
-                            ? "bg-white dark:bg-white/5 border-primary shadow-xl shadow-primary/5" 
-                            : "bg-white/40 dark:bg-stone-900/40 border-border/10 hover:border-border/30"
+                        initial={{ opacity: 0, x: -20 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: i * 0.1, duration: 0.8 }}
+                        className={`group border-b border-border/10 transition-all duration-700 ${
+                            active === i ? "pb-12" : "pb-8"
                         }`}
                     >
                         <button 
                             onClick={() => setActive(active === i ? null : i)}
-                            className="w-full flex justify-between items-center text-left p-6 md:p-8"
+                            className="w-full flex justify-between items-center text-left py-4"
                         >
-                            <span className={`text-lg md:text-xl font-display font-bold uppercase transition-colors duration-300 ${
-                                active === i ? "text-primary" : "text-foreground group-hover:text-primary"
+                            <span className={`text-2xl md:text-3xl font-display font-bold uppercase transition-all duration-500 tracking-tight ${
+                                active === i ? "text-primary" : "text-foreground group-hover:text-primary group-hover:pl-4"
                             }`}>
                                 {item.q}
                             </span>
-                            <div className={`w-8 h-8 rounded-full border border-primary/20 flex items-center justify-center transition-transform duration-500 ${
-                                active === i ? "rotate-45 bg-primary text-black" : "rotate-0 text-primary"
+                            <div className={`w-12 h-12 rounded-full border border-border/10 flex items-center justify-center transition-all duration-500 ${
+                                active === i ? "rotate-45 bg-primary border-primary text-black" : "rotate-0 text-primary group-hover:border-primary/50"
                             }`}>
-                                <Plus size={18} />
+                                <Plus size={20} />
                             </div>
                         </button>
                         
@@ -86,12 +86,11 @@ export const FAQ = () => {
                                     initial={{ height: 0, opacity: 0 }}
                                     animate={{ height: "auto", opacity: 1 }}
                                     exit={{ height: 0, opacity: 0 }}
-                                    transition={{ duration: 0.3, ease: "easeInOut" }}
+                                    transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
                                     className="overflow-hidden"
                                 >
-                                    <div className="px-6 md:px-8 pb-8">
-                                        <div className="h-px w-full bg-border/10 mb-6" />
-                                        <p className="text-base md:text-lg text-muted-foreground leading-relaxed font-light">
+                                    <div className="pt-8 max-w-3xl">
+                                        <p className="text-lg md:text-xl text-stone-500 leading-relaxed font-light">
                                             {item.a}
                                         </p>
                                     </div>

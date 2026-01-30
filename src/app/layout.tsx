@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     description: "Discover bespoke handcrafted bags, premium footwear, and luxury bedding. We train the next generation of artisans.",
     images: [
       {
-        url: "/og-image.jpg", 
+        url: "/og-image.png", 
         width: 1200,
         height: 630,
         alt: "Eriatswa Soko Global Showcase",
