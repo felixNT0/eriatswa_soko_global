@@ -1,19 +1,8 @@
-import { Metadata } from "next";
-import ProductsPageClient from "./ProductsClient";
+"use client";
 
-export const metadata: Metadata = {
-  title: "Luxury Handcrafted Collections | Bags, Footwear & Bedding",
-  description:
-    "Explore our premium catalogue of handmade bags, bespoke footwear, and luxury bedding sets. Crafted with African excellence.",
-  openGraph: {
-    title: "Luxury Handcrafted Collections | Eriatswa Soko Global",
-    description:
-      "Explore our premium catalogue of handmade bags, bespoke footwear, and luxury bedding sets.",
-    images: [
-      "https://images.unsplash.com/photo-1584917663908-21f1b2746f3a?auto=format&fit=crop&q=80&w=800",
-    ],
-  },
-};
+import { Footer } from "@/components/Footer";
+import { Navbar } from "@/components/Navbar";
+import { motion } from "framer-motion";
 
 const categories = [
   {
@@ -242,26 +231,94 @@ const categories = [
   },
 ];
 
-const jsonLd = {
-  "@context": "https://schema.org",
-  "@type": "ItemList",
-  itemListElement: categories.map((category, index) => ({
-    "@type": "ListItem",
-    position: index + 1,
-    name: category.name,
-    description: category.description,
-    url: `https://eriatswa-soko-global.vercel.app/products#${category.id}`,
-  })),
-};
-
-export default function ProductsPage() {
+export default function ProductsPageClient() {
   return (
-    <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
-      <ProductsPageClient />
-    </>
+    <main className="bg-background min-h-screen">
+      <Navbar />
+
+      {/* Header */}
+      <section className="pt-48 pb-32 px-6 md:px-12 text-center relative overflow-hidden">
+        <div className="absolute inset-0 opacity-[0.05] bg-[radial-gradient(circle_at_50%_0%,rgba(197,160,40,0.1),transparent_70%)]" />
+
+        <div className="relative z-10 max-w-5xl mx-auto">
+          <div className="inline-block px-4 py-1.5 rounded-full border border-primary/30 bg-primary/5 backdrop-blur-md mb-8">
+            <p className="text-primary font-bold tracking-[0.4em] uppercase text-[10px]">
+              Premium Collections
+            </p>
+          </div>
+          <h1 className="text-7xl md:text-9xl font-display font-black uppercase mb-10 leading-[0.8] tracking-tighter">
+            The <span className="text-outlined">Handcrafted</span>{" "}
+            <br className="hidden md:block" /> Catalogue.
+          </h1>
+          <p className="text-muted-foreground max-w-2xl mx-auto text-lg md:text-xl font-light leading-relaxed mb-12">
+            Explore our curated legacy of excellence. From bespoke leather
+            pieces to masterfully finished bedding, each item is a testament to
+            the power in every stitch.
+          </p>
+          <div className="h-px w-24 bg-primary mx-auto opacity-50" />
+        </div>
+      </section>
+
+      {/* Categories sections */}
+      <div className="space-y-48 pb-40">
+        {categories.map((category) => (
+          <section
+            key={category.id}
+            className="container mx-auto px-6 md:px-12"
+          >
+            <div className="mb-20 flex flex-col md:flex-row md:items-end justify-between gap-10">
+              <div className="max-w-xl">
+                <span className="text-[10px] font-bold text-primary tracking-[0.4em] uppercase mb-4 block opacity-60">
+                  Category
+                </span>
+                <h2 className="text-5xl md:text-7xl font-display font-bold uppercase tracking-tighter mb-6">
+                  {category.name}
+                </h2>
+                <p className="text-muted-foreground font-light text-xl leading-relaxed">
+                  {category.description}
+                </p>
+              </div>
+              <div className="h-px flex-1 bg-linear-to-r from-border/20 via-border/10 to-transparent hidden lg:block mb-8" />
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 md:gap-12">
+              {category.items.map((product, i) => (
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, scale: 0.95 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: i * 0.05, duration: 0.6 }}
+                  className="group"
+                >
+                  <div className="aspect-[4/5] overflow-hidden rounded-[2rem] bg-secondary mb-8 relative shadow-2xl border border-border/10">
+                    <div
+                      className="absolute inset-0 bg-cover bg-center transition-transform duration-[1200ms] ease-out group-hover:scale-110"
+                      style={{ backgroundImage: `url(${product.image})` }}
+                    />
+                    <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors duration-500" />
+                    <div className="absolute top-8 left-8 bg-background/90 backdrop-blur-xl px-5 py-2 rounded-full text-[10px] font-bold uppercase tracking-[0.2em] text-primary shadow-xl border border-white/10">
+                      {product.tag}
+                    </div>
+                  </div>
+
+                  <div className="space-y-3 px-2">
+                    <h3 className="text-2xl font-display font-bold uppercase tracking-tight group-hover:text-primary transition-colors duration-300">
+                      {product.name}
+                    </h3>
+                    <div className="flex items-center gap-4 text-[10px] font-bold uppercase tracking-widest text-muted-foreground/60 transition-all group-hover:text-primary">
+                      <span className="h-px w-8 bg-current opacity-30 group-hover:w-12 transition-all" />
+                      Custom Request
+                    </div>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </section>
+        ))}
+      </div>
+
+      <Footer />
+    </main>
   );
 }

@@ -1,21 +1,17 @@
-import { MetadataRoute } from 'next';
+import { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://eriatszwasoko.com';
+  const baseUrl = "https://eriatswa-soko-global.vercel.app";
 
   // Core routes
-  const routes = [
-    '',
-    '/about-ceo',
-    '/products',
-    '/privacy',
-    '/terms',
-  ].map((route) => ({
-    url: `${baseUrl}${route}`,
-    lastModified: new Date(),
-    changeFrequency: 'weekly' as const,
-    priority: route === '' ? 1 : 0.8,
-  }));
+  const routes = ["", "/about-ceo", "/products", "/privacy", "/terms"].map(
+    (route) => ({
+      url: `${baseUrl}${route}`,
+      lastModified: new Date(),
+      changeFrequency: "weekly" as const,
+      priority: route === "" ? 1 : 0.8,
+    }),
+  );
 
   return routes;
 }
