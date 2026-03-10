@@ -86,6 +86,9 @@ export const metadata: Metadata = {
     google: "Z5-CsNSeC_khXYiuwOLlI5UAdLI-laUgCmr8g3flDCI",
   },
   category: "Fashion & Lifestyle",
+  alternates: {
+    canonical: "./",
+  },
 };
 
 const jsonLd = {
