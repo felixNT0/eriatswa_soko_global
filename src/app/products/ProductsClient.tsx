@@ -2,62 +2,49 @@
 
 import { Footer } from "@/components/Footer";
 import { Navbar } from "@/components/Navbar";
-import { motion } from "framer-motion";
 
 const categories = [
   {
     id: "bags",
-    name: "Handmade Bags",
+    name: "Stylish & Durable Handmade Bags",
     description:
-      "Architectural silhouettes crafted in premium leather and exotic textures. Our signature bags are designed to be heirloom pieces.",
+      "Are you looking for quality products that combine style, durability, and affordability? Look no further! Our bag collection includes Handbags, Traveling Bags, Tote Bags (Plain & Customized), Unisex Cross Bags, School Bags, Lunch Bags and more.",
     items: [
       {
-        name: "The 'Zaria' Tote",
+        name: "Premium Handbag",
         image:
           "https://images.unsplash.com/photo-1584917663908-21f1b2746f3a?auto=format&fit=crop&q=80&w=800",
-        tag: "Iconic",
+        tag: "Elegant",
       },
       {
-        name: "Marigold Crossbody",
+        name: "Heritage Traveling Bag",
         image:
-          "https://images.unsplash.com/photo-1548036328-c9fa89d128fa?auto=format&fit=crop&q=80&w=800",
-        tag: "Atelier",
+          "https://images.unsplash.com/photo-1547949003-9792a18a2601?auto=format&fit=crop&q=80&w=800",
+        tag: "Durable",
       },
       {
-        name: "Executive Satchel",
+        name: "Customized Tote Bag",
         image:
-          "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&q=80&w=800",
+          "https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&q=80&w=800",
         tag: "Bespoke",
       },
       {
-        name: "Heritage Duffel",
+        name: "Unisex Cross Bag",
         image:
-          "https://images.unsplash.com/photo-1547949003-9792a18a2601?auto=format&fit=crop&q=80&w=800",
-        tag: "Travel",
+          "https://images.unsplash.com/photo-1548036328-c9fa89d128fa?auto=format&fit=crop&q=80&w=800",
+        tag: "Versatile",
       },
       {
-        name: "Obsidian Clutch",
-        image:
-          "https://images.unsplash.com/photo-1566150905458-1bf1fc113f0d?auto=format&fit=crop&q=80&w=800",
-        tag: "Nocturnal",
-      },
-      {
-        name: "Sovereign Backpack",
+        name: "Artisan School Bag",
         image:
           "https://images.unsplash.com/photo-1523779917675-b6ed3a42a561?auto=format&fit=crop&q=80&w=800",
-        tag: "Modern",
+        tag: "Reliable",
       },
       {
-        name: "Artisan Belt Bag",
+        name: "Premium Lunch Bag",
         image:
           "https://images.unsplash.com/photo-1559563458-527698bf5295?auto=format&fit=crop&q=80&w=800",
-        tag: "Street",
-      },
-      {
-        name: "Luxe Shopper",
-        image:
-          "https://images.unsplash.com/photo-1591561954557-26941169b49e?auto=format&fit=crop&q=80&w=800",
-        tag: "Classic",
+        tag: "Compact",
       },
     ],
   },
@@ -65,167 +52,89 @@ const categories = [
     id: "footwear",
     name: "Quality Footwear",
     description:
-      "Precision-engineered footwear combining ergonomic comfort with high-fashion Nigerian aesthetics.",
+      "Comfortable and durable footwear for Men, Women, and Children. Our selection includes high-quality leather works and different types of durable rubber footwear.",
     items: [
       {
-        name: "Onyx Palm Slippers",
-        image:
-          "https://images.unsplash.com/photo-1614252369475-531eba835eb1?auto=format&fit=crop&q=80&w=800",
-        tag: "Heritage",
-      },
-      {
-        name: "Royal Stiletto",
-        image:
-          "https://images.unsplash.com/photo-1543163521-1bf539c55dd2?auto=format&fit=crop&q=80&w=800",
-        tag: "Gala",
-      },
-      {
-        name: "Sand-Dune Loafers",
+        name: "Men's Leather Loafers",
         image:
           "https://images.unsplash.com/photo-1533867617858-e7b97e060509?auto=format&fit=crop&q=80&w=800",
-        tag: "Bespoke",
+        tag: "Classic",
       },
       {
-        name: "Kids' Artisan Sandals",
+        name: "Women's Royal Sandals",
         image:
-          "https://images.unsplash.com/photo-1520639889313-7272a74b1c73?auto=format&fit=crop&q=80&w=800",
-        tag: "Young",
+          "https://images.unsplash.com/photo-1543163521-1bf539c55dd2?auto=format&fit=crop&q=80&w=800",
+        tag: "Premium",
       },
       {
-        name: "Velvet Mules",
-        image:
-          "https://images.unsplash.com/photo-1549298916-b41d501d3772?auto=format&fit=crop&q=80&w=800",
-        tag: "Luxury",
-      },
-      {
-        name: "Desert Boots",
+        name: "Children's Durable Shoes",
         image:
           "https://images.unsplash.com/photo-1520639889313-7272a74b1c73?auto=format&fit=crop&q=80&w=800",
         tag: "Rugged",
       },
       {
-        name: "Glitter Court Shoes",
-        image:
-          "https://images.unsplash.com/photo-1543163521-1bf539c55dd2?auto=format&fit=crop&q=80&w=800",
-        tag: "Vogue",
-      },
-      {
-        name: "Artisan Slides",
+        name: "Everyday Rubber Slides",
         image:
           "https://images.unsplash.com/photo-1560343090-f0409e92791a?auto=format&fit=crop&q=80&w=800",
-        tag: "Summer",
+        tag: "Essential",
       },
     ],
   },
   {
     id: "bedding",
-    name: "Bedding Sets",
+    name: "Beautiful Bedding Collections",
     description:
-      "Sanctuary-grade linens and textiles designed for the ultimate rest. Hand-finished with obsessive attention to detail.",
+      "Transform your bedroom with our premium collections: Duvets, Throw Pillows, Bedsheets, and Pillowcases for all bed sizes.",
     items: [
       {
-        name: "Egyptian Cotton Set",
-        image:
-          "https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?auto=format&fit=crop&q=80&w=800",
-        tag: "Royal",
-      },
-      {
-        name: "Silk Pillowcase Pair",
-        image:
-          "https://images.unsplash.com/photo-1595853035070-59a39fe84de3?auto=format&fit=crop&q=80&w=800",
-        tag: "Anti-Aging",
-      },
-      {
-        name: "Jacquard Duvet Set",
+        name: "Royal Duvet Set",
         image:
           "https://images.unsplash.com/photo-1522771753035-1a5b6562f3ba?auto=format&fit=crop&q=80&w=800",
-        tag: "Legacy",
+        tag: "Luxury",
       },
       {
-        name: "Heritage Throw Pillow",
+        name: "Artisan Throw Pillow",
         image:
           "https://images.unsplash.com/photo-1584132867664-85b6e9a8057e?auto=format&fit=crop&q=80&w=800",
-        tag: "Artisan",
+        tag: "Decorative",
       },
       {
-        name: "Minimalist Linen Set",
+        name: "Premium Linen Set",
         image:
           "https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?auto=format&fit=crop&q=80&w=800",
-        tag: "Zen",
+        tag: "Comfort",
       },
       {
-        name: "Quilted Velvet Spread",
-        image:
-          "https://images.unsplash.com/photo-1531835597964-67aa32200ec0?auto=format&fit=crop&q=80&w=800",
-        tag: "Winter",
-      },
-      {
-        name: "Bespoke Baby Bedding",
-        image:
-          "https://images.unsplash.com/photo-1522771753035-1a5b6562f3ba?auto=format&fit=crop&q=80&w=800",
-        tag: "Nursery",
-      },
-      {
-        name: "Atmosphere Bolster",
+        name: "Satin Pillowcase Pair",
         image:
           "https://images.unsplash.com/photo-1595853035070-59a39fe84de3?auto=format&fit=crop&q=80&w=800",
-        tag: "Support",
+        tag: "Delicate",
       },
     ],
   },
   {
-    id: "gifting",
-    name: "Corporate Gifting",
+    id: "accessories",
+    name: "Bag Leather & Accessories",
     description:
-      "Statement-making leather souvenirs that embody your organization's commitment to excellence.",
+      "Perfect for bag makers, creatives, and fashion entrepreneurs. We provide premium leather hide, high-quality buckles, and artisan straps.",
     items: [
       {
-        name: "Hand-Stitched Journal",
+        name: "Full Grain Leather Hide",
         image:
-          "https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&q=80&w=800",
-        tag: "Executive",
+          "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&q=80&w=800",
+        tag: "Raw",
       },
       {
-        name: "Summit Document Case",
+        name: "Premium Bag Buckles",
         image:
-          "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&q=80&w=800",
-        tag: "Diplomat",
-      },
-      {
-        name: "Passport & Luggage Set",
-        image:
-          "https://images.unsplash.com/photo-1558591710-4b4a1ae0f04d?auto=format&fit=crop&q=80&w=800",
-        tag: "Elite",
-      },
-      {
-        name: "Premium Card Wallet",
-        image:
-          "https://images.unsplash.com/photo-1627123424574-724758594e93?auto=format&fit=crop&q=80&w=800",
-        tag: "Classic",
-      },
-      {
-        name: "Desk Blotter Set",
-        image:
-          "https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&q=80&w=800",
-        tag: "Bespoke",
-      },
-      {
-        name: "Keyring & Fob Duo",
-        image:
-          "https://images.unsplash.com/photo-1627123424574-724758594e93?auto=format&fit=crop&q=80&w=800",
-        tag: "Souvenir",
-      },
-      {
-        name: "Tech Organizer Case",
-        image:
-          "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&q=80&w=800",
+          "https://images.unsplash.com/photo-1621252179027-94459d27d3ee?auto=format&fit=crop&q=80&w=800",
         tag: "Utility",
       },
       {
-        name: "Personalized Gift Box",
+        name: "Artisan Bag Straps",
         image:
-          "https://images.unsplash.com/photo-1558591710-4b4a1ae0f04d?auto=format&fit=crop&q=80&w=800",
-        tag: "Presentation",
+          "https://images.unsplash.com/photo-1559563458-527698bf5295?auto=format&fit=crop&q=80&w=800",
+        tag: "Finished",
       },
     ],
   },
@@ -243,7 +152,7 @@ export default function ProductsPageClient() {
         <div className="relative z-10 max-w-5xl mx-auto">
           <div className="inline-block px-4 py-1.5 rounded-full border border-primary/30 bg-primary/5 backdrop-blur-md mb-8">
             <p className="text-primary font-bold tracking-[0.4em] uppercase text-[10px]">
-              Premium Collections
+              Premium Products
             </p>
           </div>
           <h1 className="text-7xl md:text-9xl font-display font-black uppercase mb-10 leading-[0.8] tracking-tighter">
@@ -251,72 +160,189 @@ export default function ProductsPageClient() {
             <br className="hidden md:block" /> Catalogue.
           </h1>
           <p className="text-muted-foreground max-w-2xl mx-auto text-lg md:text-xl font-light leading-relaxed mb-12">
-            Explore our curated legacy of excellence. From bespoke leather
-            pieces to masterfully finished bedding, each item is a testament to
-            the power in every stitch.
+            Explore our curated legacy of excellence. From handmade bags and
+            quality footwear to beautiful bedding products.
+            <strong> Custom designs </strong> available and{" "}
+            <strong> bulk orders </strong> accepted.
           </p>
           <div className="h-px w-24 bg-primary mx-auto opacity-50" />
         </div>
       </section>
 
-      {/* Categories sections */}
-      <div className="space-y-48 pb-40">
-        {categories.map((category) => (
-          <section
-            key={category.id}
-            className="container mx-auto px-6 md:px-12"
-          >
-            <div className="mb-20 flex flex-col md:flex-row md:items-end justify-between gap-10">
-              <div className="max-w-xl">
-                <span className="text-[10px] font-bold text-primary tracking-[0.4em] uppercase mb-4 block opacity-60">
-                  Category
-                </span>
-                <h2 className="text-5xl md:text-7xl font-display font-bold uppercase tracking-tighter mb-6">
-                  {category.name}
-                </h2>
-                <p className="text-muted-foreground font-light text-xl leading-relaxed">
-                  {category.description}
+      {/* Product Categories Section */}
+      <section className="py-24 px-6 md:px-12 bg-background">
+        <div className="container mx-auto">
+          <div className="space-y-32">
+            {categories.map((category) => (
+              <div key={category.id} id={category.id} className="scroll-mt-32">
+                <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
+                  <div className="max-w-2xl">
+                    <div className="inline-block px-4 py-1.5 rounded-full border border-primary/30 bg-primary/5 mb-6">
+                      <p className="text-primary font-bold tracking-[0.4em] uppercase text-[10px]">
+                        Category
+                      </p>
+                    </div>
+                    <h2 className="text-5xl md:text-7xl font-display font-black uppercase mb-8 leading-[0.8] tracking-tighter">
+                      {category.name}
+                    </h2>
+                    <p className="text-muted-foreground text-lg font-light leading-relaxed">
+                      {category.description}
+                    </p>
+                  </div>
+                </div>
+
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
+                  {category.items.map((item, idx) => (
+                    <div
+                      key={idx}
+                      className="group cursor-pointer"
+                      itemScope
+                      itemType="https://schema.org/Product"
+                    >
+                      <script
+                        type="application/ld+json"
+                        dangerouslySetInnerHTML={{
+                          __html: JSON.stringify({
+                            "@context": "https://schema.org",
+                            "@type": "Product",
+                            name: item.name,
+                            description: `${item.name} - Handcrafted ${category.name} by Eriatswa Soko Global.`,
+                            image: item.image,
+                            brand: {
+                              "@type": "Brand",
+                              name: "Eriatswa Soko Global",
+                            },
+                            category: category.name,
+                          }),
+                        }}
+                      />
+                      <div className="aspect-[4/5] overflow-hidden rounded-3xl bg-secondary relative mb-6 shadow-2xl border border-white/5">
+                        <img
+                          src={item.image}
+                          alt={`${item.name} - Handcrafted ${category.name} by Eriatswa Soko Global`}
+                          className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                          itemProp="image"
+                        />
+                        <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/20 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-500" />
+                        <div className="absolute top-6 right-6">
+                          <span className="px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-[10px] font-bold uppercase tracking-widest text-white">
+                            {item.tag}
+                          </span>
+                        </div>
+                      </div>
+                      <h3
+                        className="text-xl font-display font-bold uppercase tracking-tight group-hover:text-primary transition-colors"
+                        itemProp="name"
+                      >
+                        {item.name}
+                      </h3>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Additional Features Section */}
+      <section className="py-32 bg-stone-900 text-white relative overflow-hidden">
+        <div className="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] pointer-events-none" />
+        <div className="container mx-auto px-6 md:px-12 relative z-10">
+          <div className="grid lg:grid-cols-2 gap-20 items-center">
+            <div>
+              <div className="inline-block px-4 py-1.5 rounded-full border border-primary/30 bg-primary/5 mb-8">
+                <p className="text-primary font-bold tracking-[0.4em] uppercase text-[10px]">
+                  Exceptional Value
                 </p>
               </div>
-              <div className="h-px flex-1 bg-linear-to-r from-border/20 via-border/10 to-transparent hidden lg:block mb-8" />
+              <h2 className="text-5xl md:text-7xl font-display font-black uppercase mb-12 leading-[0.8] tracking-tighter">
+                Why Choose <br />
+                <span className="text-outlined">Eriatswa.</span>
+              </h2>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
+                {[
+                  {
+                    title: "Quality Materials",
+                    desc: "Sourced from the finest hides and durable fabrics.",
+                  },
+                  {
+                    title: "Neat Finishing",
+                    desc: "Professional craftsmanship in every single stitch.",
+                  },
+                  {
+                    title: "Affordable Prices",
+                    desc: "Luxury handcrafted goods that won't break the bank.",
+                  },
+                  {
+                    title: "Reliable Service",
+                    desc: "Consistency and excellence in every delivery.",
+                  },
+                ].map((item, idx) => (
+                  <div key={idx} className="space-y-3">
+                    <div className="flex items-center gap-3">
+                      <div className="w-2 h-2 bg-primary rotate-45" />
+                      <h4 className="font-bold uppercase tracking-widest text-sm">
+                        {item.title}
+                      </h4>
+                    </div>
+                    <p className="text-stone-400 text-sm leading-relaxed">
+                      {item.desc}
+                    </p>
+                  </div>
+                ))}
+              </div>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 md:gap-12">
-              {category.items.map((product, i) => (
-                <motion.div
-                  key={i}
-                  initial={{ opacity: 0, scale: 0.95 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: i * 0.05, duration: 0.6 }}
-                  className="group"
+            <div className="bg-white/5 border border-white/10 p-12 rounded-[3rem] backdrop-blur-xl">
+              <h3 className="text-3xl font-display font-bold uppercase mb-8 tracking-tight">
+                Special Services
+              </h3>
+              <div className="space-y-8">
+                <div className="flex items-start gap-6">
+                  <div className="w-12 h-12 rounded-2xl bg-primary flex items-center justify-center text-black shrink-0 font-bold">
+                    CD
+                  </div>
+                  <div>
+                    <h4 className="text-lg font-bold uppercase tracking-tight mb-2">
+                      Custom Designs Available
+                    </h4>
+                    <p className="text-stone-400 text-sm leading-relaxed">
+                      Need something unique? We bring your vision to life with
+                      bespoke tailoring.
+                    </p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-6">
+                  <div className="w-12 h-12 rounded-2xl bg-white/10 flex items-center justify-center text-white shrink-0 font-bold border border-white/10">
+                    BO
+                  </div>
+                  <div>
+                    <h4 className="text-lg font-bold uppercase tracking-tight mb-2">
+                      Bulk Orders Accepted
+                    </h4>
+                    <p className="text-stone-400 text-sm leading-relaxed">
+                      Perfect for retailers, corporate gifts, and large-scale
+                      fashion events.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className="mt-12 pt-8 border-t border-white/10">
+                <p className="text-primary font-bold tracking-widest uppercase text-xs">
+                  Ready To Partner?
+                </p>
+                <a
+                  href="/#contact"
+                  className="inline-block mt-4 text-white hover:text-primary transition-colors font-light italic border-b border-primary/20 pb-1"
                 >
-                  <div className="aspect-[4/5] overflow-hidden rounded-[2rem] bg-secondary mb-8 relative shadow-2xl border border-border/10">
-                    <div
-                      className="absolute inset-0 bg-cover bg-center transition-transform duration-[1200ms] ease-out group-hover:scale-110"
-                      style={{ backgroundImage: `url(${product.image})` }}
-                    />
-                    <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors duration-500" />
-                    <div className="absolute top-8 left-8 bg-background/90 backdrop-blur-xl px-5 py-2 rounded-full text-[10px] font-bold uppercase tracking-[0.2em] text-primary shadow-xl border border-white/10">
-                      {product.tag}
-                    </div>
-                  </div>
-
-                  <div className="space-y-3 px-2">
-                    <h3 className="text-2xl font-display font-bold uppercase tracking-tight group-hover:text-primary transition-colors duration-300">
-                      {product.name}
-                    </h3>
-                    <div className="flex items-center gap-4 text-[10px] font-bold uppercase tracking-widest text-muted-foreground/60 transition-all group-hover:text-primary">
-                      <span className="h-px w-8 bg-current opacity-30 group-hover:w-12 transition-all" />
-                      Custom Request
-                    </div>
-                  </div>
-                </motion.div>
-              ))}
+                  Speak with our concierge →
+                </a>
+              </div>
             </div>
-          </section>
-        ))}
-      </div>
+          </div>
+        </div>
+      </section>
 
       <Footer />
     </main>

@@ -2,13 +2,13 @@ import { Metadata } from "next";
 import AboutCEOClient from "./AboutCEOClient";
 
 export const metadata: Metadata = {
-  title: "About the CEO | Tsowa Nnawonchiko Lucy",
+  title: "About our Founder | Tsowa Nnawonchiko Lucy",
   description:
-    "Meet Mrs. Tsowa Nnawonchiko Lucy, the visionary founder of Eriatswa Soko Global and member of the Governing Council for FUTIA.",
+    "Meet Mrs. Tsowa Nnawonchiko Lucy, the visionary founder and Creative Director of Eriatswa Soko Global. Member of the Governing Council for FUTIA and advocate for handcrafted excellence.",
   openGraph: {
-    title: "About the CEO | Tsowa Nnawonchiko Lucy",
+    title: "About our Founder | Tsowa Nnawonchiko Lucy",
     description:
-      "Meet Mrs. Tsowa Nnawonchiko Lucy, the visionary founder of Eriatswa Soko Global and member of the Governing Council for FUTIA.",
+      "Visionary leader, Creative Director, and founder of Eriatswa Soko Global. Dedicated to quality craftsmanship and artisan empowerment.",
     images: ["/ceo.jpeg"],
   },
 };
@@ -18,6 +18,8 @@ const jsonLd = {
   "@type": "Person",
   name: "Tsowa Nnawonchiko Lucy",
   jobTitle: "Founder & Creative Director",
+  description:
+    "Visionary founder of Eriatswa Soko Global and member of the Governing Council for the Federal University of Technology, Ikot Abasi (FUTIA).",
   worksFor: {
     "@type": "Organization",
     name: "Eriatswa Soko Global",

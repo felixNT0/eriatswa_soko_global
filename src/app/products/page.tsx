@@ -2,13 +2,13 @@ import { Metadata } from "next";
 import ProductsPageClient from "./ProductsClient";
 
 export const metadata: Metadata = {
-  title: "Luxury Handcrafted Collections | Bags, Footwear & Bedding",
+  title: "Our Products | Handmade Bags, Footwear & Bedding",
   description:
-    "Explore our premium catalogue of handmade bags, bespoke footwear, and luxury bedding sets. Crafted with African excellence.",
+    "Explore Eriatswa Soko Global's premium catalogue. From stylish handmade bags and quality footwear to beautiful bedding and leather accessories. Handcrafted with excellence.",
   openGraph: {
-    title: "Luxury Handcrafted Collections | Eriatswa Soko Global",
+    title: "Our Products | Eriatswa Soko Global",
     description:
-      "Explore our premium catalogue of handmade bags, bespoke footwear, and luxury bedding sets.",
+      "Explore our premium catalogue of handmade bags, quality footwear, and luxury bedding sets. Custom designs and bulk orders available.",
     images: [
       "https://images.unsplash.com/photo-1584917663908-21f1b2746f3a?auto=format&fit=crop&q=80&w=800",
     ],
@@ -20,225 +20,25 @@ const categories = [
     id: "bags",
     name: "Handmade Bags",
     description:
-      "Architectural silhouettes crafted in premium leather and exotic textures. Our signature bags are designed to be heirloom pieces.",
-    items: [
-      {
-        name: "The 'Zaria' Tote",
-        image:
-          "https://images.unsplash.com/photo-1584917663908-21f1b2746f3a?auto=format&fit=crop&q=80&w=800",
-        tag: "Iconic",
-      },
-      {
-        name: "Marigold Crossbody",
-        image:
-          "https://images.unsplash.com/photo-1548036328-c9fa89d128fa?auto=format&fit=crop&q=80&w=800",
-        tag: "Atelier",
-      },
-      {
-        name: "Executive Satchel",
-        image:
-          "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&q=80&w=800",
-        tag: "Bespoke",
-      },
-      {
-        name: "Heritage Duffel",
-        image:
-          "https://images.unsplash.com/photo-1547949003-9792a18a2601?auto=format&fit=crop&q=80&w=800",
-        tag: "Travel",
-      },
-      {
-        name: "Obsidian Clutch",
-        image:
-          "https://images.unsplash.com/photo-1566150905458-1bf1fc113f0d?auto=format&fit=crop&q=80&w=800",
-        tag: "Nocturnal",
-      },
-      {
-        name: "Sovereign Backpack",
-        image:
-          "https://images.unsplash.com/photo-1523779917675-b6ed3a42a561?auto=format&fit=crop&q=80&w=800",
-        tag: "Modern",
-      },
-      {
-        name: "Artisan Belt Bag",
-        image:
-          "https://images.unsplash.com/photo-1559563458-527698bf5295?auto=format&fit=crop&q=80&w=800",
-        tag: "Street",
-      },
-      {
-        name: "Luxe Shopper",
-        image:
-          "https://images.unsplash.com/photo-1591561954557-26941169b49e?auto=format&fit=crop&q=80&w=800",
-        tag: "Classic",
-      },
-    ],
+      "From stylish handbags to durable traveling bags and customized tote bags. Every piece is handcrafted with excellence.",
   },
   {
     id: "footwear",
     name: "Quality Footwear",
     description:
-      "Precision-engineered footwear combining ergonomic comfort with high-fashion Nigerian aesthetics.",
-    items: [
-      {
-        name: "Onyx Palm Slippers",
-        image:
-          "https://images.unsplash.com/photo-1614252369475-531eba835eb1?auto=format&fit=crop&q=80&w=800",
-        tag: "Heritage",
-      },
-      {
-        name: "Royal Stiletto",
-        image:
-          "https://images.unsplash.com/photo-1543163521-1bf539c55dd2?auto=format&fit=crop&q=80&w=800",
-        tag: "Gala",
-      },
-      {
-        name: "Sand-Dune Loafers",
-        image:
-          "https://images.unsplash.com/photo-1533867617858-e7b97e060509?auto=format&fit=crop&q=80&w=800",
-        tag: "Bespoke",
-      },
-      {
-        name: "Kids' Artisan Sandals",
-        image:
-          "https://images.unsplash.com/photo-1520639889313-7272a74b1c73?auto=format&fit=crop&q=80&w=800",
-        tag: "Young",
-      },
-      {
-        name: "Velvet Mules",
-        image:
-          "https://images.unsplash.com/photo-1549298916-b41d501d3772?auto=format&fit=crop&q=80&w=800",
-        tag: "Luxury",
-      },
-      {
-        name: "Desert Boots",
-        image:
-          "https://images.unsplash.com/photo-1520639889313-7272a74b1c73?auto=format&fit=crop&q=80&w=800",
-        tag: "Rugged",
-      },
-      {
-        name: "Glitter Court Shoes",
-        image:
-          "https://images.unsplash.com/photo-1543163521-1bf539c55dd2?auto=format&fit=crop&q=80&w=800",
-        tag: "Vogue",
-      },
-      {
-        name: "Artisan Slides",
-        image:
-          "https://images.unsplash.com/photo-1560343090-f0409e92791a?auto=format&fit=crop&q=80&w=800",
-        tag: "Summer",
-      },
-    ],
+      "Comfortable and durable footwear for Men, Women, and Children. Refined leather works and durable rubber footwear.",
   },
   {
     id: "bedding",
-    name: "Bedding Sets",
+    name: "Beautiful Bedding",
     description:
-      "Sanctuary-grade linens and textiles designed for the ultimate rest. Hand-finished with obsessive attention to detail.",
-    items: [
-      {
-        name: "Egyptian Cotton Set",
-        image:
-          "https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?auto=format&fit=crop&q=80&w=800",
-        tag: "Royal",
-      },
-      {
-        name: "Silk Pillowcase Pair",
-        image:
-          "https://images.unsplash.com/photo-1595853035070-59a39fe84de3?auto=format&fit=crop&q=80&w=800",
-        tag: "Anti-Aging",
-      },
-      {
-        name: "Jacquard Duvet Set",
-        image:
-          "https://images.unsplash.com/photo-1522771753035-1a5b6562f3ba?auto=format&fit=crop&q=80&w=800",
-        tag: "Legacy",
-      },
-      {
-        name: "Heritage Throw Pillow",
-        image:
-          "https://images.unsplash.com/photo-1584132867664-85b6e9a8057e?auto=format&fit=crop&q=80&w=800",
-        tag: "Artisan",
-      },
-      {
-        name: "Minimalist Linen Set",
-        image:
-          "https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?auto=format&fit=crop&q=80&w=800",
-        tag: "Zen",
-      },
-      {
-        name: "Quilted Velvet Spread",
-        image:
-          "https://images.unsplash.com/photo-1531835597964-67aa32200ec0?auto=format&fit=crop&q=80&w=800",
-        tag: "Winter",
-      },
-      {
-        name: "Bespoke Baby Bedding",
-        image:
-          "https://images.unsplash.com/photo-1522771753035-1a5b6562f3ba?auto=format&fit=crop&q=80&w=800",
-        tag: "Nursery",
-      },
-      {
-        name: "Atmosphere Bolster",
-        image:
-          "https://images.unsplash.com/photo-1595853035070-59a39fe84de3?auto=format&fit=crop&q=80&w=800",
-        tag: "Support",
-      },
-    ],
+      "Duvets, Throw Pillows, Bedsheets, and Pillowcases for all bed sizes. Transform your bedroom into a sanctuary.",
   },
   {
-    id: "gifting",
-    name: "Corporate Gifting",
+    id: "accessories",
+    name: "Leather & Accessories",
     description:
-      "Statement-making leather souvenirs that embody your organization's commitment to excellence.",
-    items: [
-      {
-        name: "Hand-Stitched Journal",
-        image:
-          "https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&q=80&w=800",
-        tag: "Executive",
-      },
-      {
-        name: "Summit Document Case",
-        image:
-          "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&q=80&w=800",
-        tag: "Diplomat",
-      },
-      {
-        name: "Passport & Luggage Set",
-        image:
-          "https://images.unsplash.com/photo-1558591710-4b4a1ae0f04d?auto=format&fit=crop&q=80&w=800",
-        tag: "Elite",
-      },
-      {
-        name: "Premium Card Wallet",
-        image:
-          "https://images.unsplash.com/photo-1627123424574-724758594e93?auto=format&fit=crop&q=80&w=800",
-        tag: "Classic",
-      },
-      {
-        name: "Desk Blotter Set",
-        image:
-          "https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&q=80&w=800",
-        tag: "Bespoke",
-      },
-      {
-        name: "Keyring & Fob Duo",
-        image:
-          "https://images.unsplash.com/photo-1627123424574-724758594e93?auto=format&fit=crop&q=80&w=800",
-        tag: "Souvenir",
-      },
-      {
-        name: "Tech Organizer Case",
-        image:
-          "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&q=80&w=800",
-        tag: "Utility",
-      },
-      {
-        name: "Personalized Gift Box",
-        image:
-          "https://images.unsplash.com/photo-1558591710-4b4a1ae0f04d?auto=format&fit=crop&q=80&w=800",
-        tag: "Presentation",
-      },
-    ],
+      "Premium leather materials and essential bag accessories. Perfect for bag makers, creatives, and entrepreneurs.",
   },
 ];
 

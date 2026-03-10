@@ -5,8 +5,36 @@ import { Navbar } from "@/components/Navbar";
 import { motion } from "framer-motion";
 
 export default function AboutCEOClient() {
+  const ceoSchema = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    name: "Tsowa Nnawonchiko Lucy",
+    jobTitle: "Founder & Creative Director",
+    affiliation: {
+      "@type": "Organization",
+      name: "Eriatswa Soko Global",
+    },
+    memberOf: {
+      "@type": "Organization",
+      name: "Federal University of Technology, Ikot Abasi (FUTIA)",
+      role: "Member of the Governing Council",
+    },
+    description:
+      "Founder & Creative Director of Eriatswa Soko Global. Member of the Governing Council, FUTIA. Redefining African Luxury through handcrafted excellence.",
+    image: "https://eriatswa-soko-global.vercel.app/ceo.jpeg",
+    sameAs: [
+      "https://web.facebook.com/paul.lucia.336",
+      "https://www.tiktok.com/@nnawonchiko",
+      "https://wa.me/2347035467338",
+    ],
+  };
+
   return (
     <main className="bg-background min-h-screen text-foreground relative overflow-hidden">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(ceoSchema) }}
+      />
       <Navbar />
 
       {/* Cinematic Hero */}
@@ -44,7 +72,7 @@ export default function AboutCEOClient() {
         <div className="absolute bottom-12 right-12 hidden lg:block text-right">
           <div className="h-px w-32 bg-primary mb-4 ml-auto" />
           <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-primary">
-            Est. 2012
+            Est. 2014
           </p>
         </div>
       </section>
@@ -63,26 +91,28 @@ export default function AboutCEOClient() {
                 Crafting <br /> A Legacy.
               </h2>
             </div>
-            <div className="lg:col-span-7 lg:col-start-6 space-y-12 text-xl md:text-2xl text-stone-500 font-light leading-relaxed">
+            <article className="lg:col-span-7 lg:col-start-6 space-y-12 text-xl md:text-2xl text-stone-500 font-light leading-relaxed">
               <p className="text-foreground font-medium italic">
-                "African hands are capable of global excellence. This is not
-                just a belief; it is the foundation of every stitch we make at
-                Eriatswa Soko Global."
+                &quot;Eriatswa Soko Global is a creative, handcrafted fashion
+                and lifestyle brand committed to delivering quality, elegance,
+                and excellence. We specialize in producing handmade bags, shoes,
+                bedsheets, and fashion accessories, combining skilled
+                craftsmanship with modern designs.&quot;
               </p>
               <p>
-                Mrs. Tsowa Nnawonchiko Lucy is a distinguished entrepreneur and
-                visionary leader committed to redefining the narrative of
-                African luxury. With a profound respect for heritage
-                craftsmanship and a keen eye for modern design, she founded ESG
-                to bring world-class leather goods to the global market.
+                At Eriatswa Soko Global, every piece is thoughtfully crafted
+                using premium materials and professional finishing. Our sewing
+                and production process reflects precision, creativity, and
+                passion—ensuring that every customer enjoys products that are
+                both beautiful and long-lasting.
               </p>
               <p>
-                Her journey began with the Eriatswa Soko Academy, an institution
-                dedicated to training and empowering the next generation of
-                artisans, ensuring that the sacred art of leather manipulation
-                is preserved and elevated.
+                With a focus on quality, originality, and customer satisfaction,
+                we serve individuals, retailers, and wholesalers who appreciate
+                well-made handmade items. Whether you need custom designs, bulk
+                orders, or unique fashion pieces, we deliver with excellence.
               </p>
-            </div>
+            </article>
           </div>
         </div>
       </section>
@@ -169,7 +199,8 @@ export default function AboutCEOClient() {
                 <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?auto=format&fit=crop&q=80&w=800')] bg-cover bg-center grayscale opacity-30" />
                 <div className="absolute inset-0 flex items-center justify-center p-12 text-center">
                   <p className="text-white text-3xl font-display font-black uppercase tracking-tighter italic">
-                    "Empowering The Future Through Strategic Innovation."
+                    &quot;Empowering The Future Through Strategic
+                    Innovation.&quot;
                   </p>
                 </div>
               </div>

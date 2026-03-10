@@ -1,6 +1,7 @@
 import { AboutCEO } from "@/components/AboutCEO";
 import { Academy } from "@/components/Academy";
 import { AnimatedBackground } from "@/components/AnimatedBackground";
+import { ContactSection } from "@/components/ContactSection";
 import { FAQ } from "@/components/FAQ";
 import { Features } from "@/components/Features";
 import { Footer } from "@/components/Footer";
@@ -10,6 +11,7 @@ import { Navbar } from "@/components/Navbar";
 import { Newsletter } from "@/components/Newsletter";
 import { Philosophy } from "@/components/Philosophy";
 import { Process } from "@/components/Process";
+import { ReviewBanner } from "@/components/ReviewBanner";
 import { Services } from "@/components/Services";
 import { Stats } from "@/components/Stats";
 import { Team } from "@/components/Team";
@@ -30,9 +32,11 @@ export default function Home() {
       <Process />
       <Team />
       <Testimonials />
+      <ReviewBanner />
       <GlobalDelivery />
       <FAQ />
       <Newsletter />
+      <ContactSection />
       <Footer />
     </main>
   );

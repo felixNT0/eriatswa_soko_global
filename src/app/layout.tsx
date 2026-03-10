@@ -18,55 +18,58 @@ const manrope = Manrope({
 
 export const metadata: Metadata = {
   title: {
-    default: "Eriatswa Soko Global | Excellence in Handcrafted Luxury",
+    default: "Eriatswa Soko Global | Handcrafted With Excellence",
     template: "%s | Eriatswa Soko Global",
   },
   metadataBase: new URL("https://eriatswa-soko-global.vercel.app"),
   description:
-    "Discover bespoke handcrafted bags, premium footwear, and luxury bedding. We train the next generation of artisans. Founded by Mrs. Lucy Tsowa.",
+    "Eriatswa Soko Global is a creative, handcrafted fashion and lifestyle brand. We specialize in handmade bags, quality footwear, luxry bedding, and artisan training. Handcrafted with excellence in Nigeria.",
   keywords: [
+    "Eriatswa Soko Global",
     "Handmade Bags",
-    "Luxury Footwear",
-    "Custom Bedding",
-    "Artisan Training",
-    "Ilorin Shoemaking",
-    "Lagos Fashion",
+    "Luxury Handmade Bags Nigeria",
+    "Quality Leather Footwear",
+    "Luxury Bedding Sets",
+    "Artisan Training Program",
+    "Bespoke Fashion Nigerian Brand",
     "Tsowa Nnawonchiko Lucy",
-    "Eriatswa Soko",
-    "FUTIA Governing Council",
-    "Nigeria Luxury Brand",
-    "African Luxury",
-    "Leather Goods",
-    "Bespoke Fashion",
-    "Vocational Training Nigeria",
-    "Global Luxury Brand",
-    "International Shipping",
-    "Handcrafted Leather",
+    "Lucy Tsowa Fashion",
+    "Felix Kolo Tsowa",
+    "Handcrafted Leather Goods",
+    "Sustainable Fashion Africa",
+    "Custom Made Bags",
+    "Corporate Gifting Solutions Nigeria",
+    "Authentic African Luxury",
   ],
-  authors: [{ name: "Eriatswa Soko Global" }],
-  creator: "Eriatswa Soko Global",
+  authors: [
+    { name: "Eriatswa Soko Global" },
+    { name: "Felix Kolo Tsowa", url: "https://fkt-portfolio.vercel.app/" },
+  ],
+  creator: "Felix Kolo Tsowa",
+  publisher: "Eriatswa Soko Global",
   openGraph: {
     type: "website",
     locale: "en_US",
     url: "https://eriatswa-soko-global.vercel.app",
     siteName: "Eriatswa Soko Global",
-    title: "Eriatswa Soko Global | Excellence in Handcrafted Luxury",
+    title: "Eriatswa Soko Global | Handcrafted With Excellence",
     description:
-      "Discover bespoke handcrafted bags, premium footwear, and luxury bedding. We train the next generation of artisans.",
+      "Combining skilled craftsmanship with modern designs. Explore our products of handmade bags, shoes, and luxury bedding.",
     images: [
       {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Eriatswa Soko Global Showcase",
+        alt: "Eriatswa Soko Global - Artisanal Excellence",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Eriatswa Soko Global",
-    description: "Handcrafted Excellence. Bags, Footwear, Bedding & Training.",
-    creator: "@eriatszwa",
+    title: "Eriatswa Soko Global | Handcrafted With Excellence",
+    description:
+      "Premium handmade bags, footwear, and bedding. Quality you can trust. Craftsmanship you can feel.",
+    images: ["/og-image.png"],
   },
   robots: {
     index: true,
@@ -79,45 +82,88 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
-  // Note: Favicon is handled automatically by src/app/icon.svg
   verification: {
-    google: "google-site-verification-code", // Placeholder for user to fill if they have one
+    google: "Z5-CsNSeC_khXYiuwOLlI5UAdLI-laUgCmr8g3flDCI",
   },
-  category: "luxury fashion",
+  category: "Fashion & Lifestyle",
 };
 
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Organization",
   name: "Eriatswa Soko Global",
-  url: "https://eriatszwasoko.com",
-  logo: "https://eriatszwasoko.com/icon.svg",
+  url: "https://eriatswa-soko-global.vercel.app",
+  logo: "https://eriatswa-soko-global.vercel.app/icon.svg",
+  description:
+    "Creative, handcrafted fashion and lifestyle brand committed to quality and excellence.",
   founder: {
     "@type": "Person",
     name: "Tsowa Nnawonchiko Lucy",
     jobTitle: "Founder & Creative Director",
-    description:
-      "Member of the Governing Council for the Federal University of Technology, Ikot Abasi (FUTIA).",
-    url: "https://eriatszwasoko.com",
+    memberOf: {
+      "@type": "Organization",
+      name: "Federal University of Technology, Ikot Abasi (FUTIA)",
+      role: "Member of the Governing Council",
+    },
+    knowsAbout: [
+      "Handmade Bags",
+      "Leather Craftsmanship",
+      "Vocational Training",
+      "African Luxury Fashion",
+    ],
+    sameAs: [
+      "https://web.facebook.com/paul.lucia.336",
+      "https://www.tiktok.com/@nnawonchiko",
+      "https://wa.me/2347035467338",
+    ],
   },
   employee: [
     {
       "@type": "Person",
       name: "Blessing Nnawonchiko Tsowa",
-      jobTitle: "Managing Director / Co-founder",
+      jobTitle: "Managing Director & Co-founder",
+      knowsAbout: ["Business Management", "Strategic Planning"],
+      sameAs: [
+        "https://www.facebook.com/blessing.tsowa",
+        "https://wa.me/2348132486562",
+        "https://www.linkedin.com/in/tsowa-blessing/",
+      ],
     },
-    { "@type": "Person", name: "Felix Kolo Tsowa", jobTitle: "Co-founder" },
+    {
+      "@type": "Person",
+      name: "Felix Kolo Tsowa",
+      jobTitle: "Co-founder & Tech Lead",
+      knowsAbout: ["Full Stack Development", "Digital Transformation"],
+      sameAs: [
+        "https://www.facebook.com/profile.php?id=61566528129656",
+        "https://www.tiktok.com/@felixnt001",
+        "https://www.linkedin.com/in/felixnt0/",
+      ],
+    },
     {
       "@type": "Person",
       name: "Mary Paul",
       jobTitle: "Chief Operating Officer",
+      knowsAbout: ["Operations Management", "Customer Excellence"],
+      sameAs: ["https://wa.me/2348038414805"],
     },
     {
       "@type": "Person",
       name: "Emmanuel Kolo Tsowa",
       jobTitle: "Head of Media",
+      knowsAbout: ["Digital Media", "Content Creation"],
+      sameAs: [
+        "https://www.tiktok.com/@legend4764",
+        "https://www.facebook.com/itz.legends.753653",
+      ],
     },
-    { "@type": "Person", name: "Paul Zhiri", jobTitle: "Strategic Adviser" },
+    {
+      "@type": "Person",
+      name: "Paul Zhiri",
+      jobTitle: "Strategic Adviser",
+      knowsAbout: ["Strategic Consulting", "Business Advisory"],
+      sameAs: ["https://wa.me/2348035185063"],
+    },
   ],
   address: {
     "@type": "PostalAddress",
@@ -128,7 +174,15 @@ const jsonLd = {
   sameAs: [
     "https://web.facebook.com/paul.lucia.336",
     "https://www.tiktok.com/@nnawonchiko",
+    "https://wa.me/2347035467338",
   ],
+  contactPoint: {
+    "@type": "ContactPoint",
+    telephone: "+234 703 546 7338",
+    contactType: "customer service",
+    email: "lucytsowa3@gmail.com",
+    availableLanguage: ["English"],
+  },
 };
 
 export default function RootLayout({
@@ -152,8 +206,8 @@ export default function RootLayout({
         />
         <ThemeProvider
           attribute="class"
-          defaultTheme="system"
-          enableSystem
+          defaultTheme="dark"
+          enableSystem={false}
           disableTransitionOnChange
         >
           {children}
